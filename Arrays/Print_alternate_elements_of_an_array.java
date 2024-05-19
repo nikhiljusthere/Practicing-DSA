@@ -1,32 +1,15 @@
 
 /*
     Print alternate elements of an array
-    https://www.geeksforgeeks.org/problems/operating-an-array/1 
+    https://www.geeksforgeeks.org/problems/print-alternate-elements-of-an-array/1
 
 */
-    class GfG
-    {		
-        public boolean searchEle(List<Integer> a,int x)
-           {
-            return a.contains(x);
-        }
-        public boolean insertEle(List<Integer> a,int y,int yi)
-            {
-                  if(yi >= 0 && yi < a.size()) {
-                      a.add(yi, y);
-                      return true;
-                  }		
-                  return false;
-        }
-        public boolean deleteEle(List<Integer> a,int z)
-            {
-            for (int i=0; i < a.size(); i++) {
-                if(a.get(i) == z){
-                    a.remove(i);
-                    return true;
-                }
-            }
-            return false;
+class GfG
+{
+    public static void print(int arr[], int n)
+    {
+        for (int i = 0; i < n; i=i+2) {
+            System.out.print(arr[i]+" " );
         }
     }
-    
+}
