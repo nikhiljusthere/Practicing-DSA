@@ -1,3 +1,5 @@
+//Code to print successive star pattern taking input from user
+
 import java.util.Scanner;
 
 public class Successive_star_pattern {
