@@ -7,7 +7,7 @@ class calculator{
     }
 }
 
-public class Calling_methods_from_different_classes{
+public class Calling_methods_from_different_class{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num1 = 20;
