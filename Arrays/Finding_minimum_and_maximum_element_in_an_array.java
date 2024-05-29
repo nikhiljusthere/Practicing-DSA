@@ -6,14 +6,23 @@ class Solution
 {
     static Pair getMinMax(long a[], long n)  
     {
-        Arrays.sort(a);
-        
+       
         long min = 0;
         long max = 0;
-        min = a[0];
-        max = a[(int)(n-1)];
-        return new Pair(min,max);
+        max = min = a[0];
         
+        for (int i = 1; i < n; i++)
+        {
+            if (a[i] > max)
+            max = a[i];
+            
+            if (a[i] < min)
+            min = a[i];
+            
+            
+        }
+        
+        return new Pair(min,max);
     }
 }
-}
+
