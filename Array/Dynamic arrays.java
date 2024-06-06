@@ -37,24 +37,32 @@ public class array {
 //  binary search
 
 class Solution {
-    public int[] smallerNumbersThanCurrent(int[] nums) {
-
+    public char nextGreatestLetter(char[] letters, char target) {
+        int n = letters.length;
         
-        int[] arr = new int[nums.length];
-
-        for ( int i = 0; i < nums.length; i++ )
+        if (target >= letters[n - 1])
         {
-            int count = 0;
-            for ( int j = 0; j < nums.length;j++ )
-            {
-                if (some condition)
-                {
-                     count++;
-                }
-            }
-            arr[i] = count;
+            return letters[0];
         }
-        return arr;
+
+        int left = 0;
+        int right = n - 1;
+
+        while (left < right)
+        {
+            int mid = left + (right - left) / 2;
+            if (letters[mid] > target)
+            {
+                right = mid; 
+            }
+
+            else
+            {
+                left = mid + 1; 
+            }
+        }
+
+        return letters[left];
     }
 }
 
