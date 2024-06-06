@@ -10,7 +10,6 @@ public class Reversing_array {
         int n = sc.nextInt();
         arr = new int[n];
         rev = new int[n];
-
         for (int i = 0; i < n; i++)
         {
             System.out.printf("Enter element at arr[%d]: ",i);
